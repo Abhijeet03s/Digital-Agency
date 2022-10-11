@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Rubik', sans-serif;
-  
+  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -15,14 +14,28 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
 
+body::-webkit-scrollbar-track {
+  background-color: #f0f0f042;
+}
 
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #8574e9;
+}
 
+.underlineHover::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
 
-
-
-
-
-
-
-
+.underlineHover:hover::after {
+  width: 100%;
+}
